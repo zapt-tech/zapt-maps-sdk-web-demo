@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zapt Map</title>
+</head>
+<body>
+  <div>
+    <button id="dialogOpenButton" onclick="openDialog()" style="position: absolute; top: 49%; left: 47%;">Abrir Mapa</button>
+  </div>
+  <dialog id="mapDialog">
+    <div style="text-align: end">
+      <button id="dialogCloseButton" onclick="closeDialog()">X</button>
+    </div>
+    <iframe src="https://app.zapt.tech/#/map?placeId=-ldbpd2phzmsfhb9-9on" width="1080px" height="607.5px"></iframe>
+  </dialog>  
+  <script>
+    function openDialog(){
+      var dialog = document.getElementById('mapDialog');
+      dialog.showModal();
+    }
+
+    function closeDialog(){
+      var dialog = document.getElementById('mapDialog');
+      dialog.close();  
+    }
+  </script>      
+</body>
+</html>
